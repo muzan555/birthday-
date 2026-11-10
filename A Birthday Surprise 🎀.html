@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Birthday Surprise 🎀</title>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--p:#f48fb1;--d:#d81b60;--l:#ffe3ee;--ink:#2b2b2b}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;font-family:'Patrick Hand','Comic Sans MS',cursive;color:var(--ink)}
+body{background:conic-gradient(var(--p) 25%,#fff 0 50%,var(--p) 0 75%,#fff 0) 0 0/26px 26px;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+.frame{position:absolute;inset:max(14px,env(safe-area-inset-top,0px)) 14px max(14px,env(safe-area-inset-bottom,0px));background:linear-gradient(#ffd6e6 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,#ffd6e6 1px,transparent 1px) 0 0/22px 22px,#fffafc;overflow:hidden;box-shadow:0 0 0 6px #fff}
+.pg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;pointer-events:none;transform:scale(.97);transition:.45s}
+.pg.on{opacity:1;pointer-events:auto;transform:none}
+.d{position:absolute;pointer-events:none}
+.star{width:clamp(60px,16vmin,120px)}
+.s1{right:-14px;top:-14px}.s2{left:-14px;bottom:-14px;transform:rotate(20deg)}
+.bt{width:clamp(110px,30vmin,230px)}.b1{left:10px;top:2px}.b2{right:70px;top:2px;transform:scaleX(-1)}
+h1{font-weight:400;font-size:clamp(26px,6.5vmin,48px);line-height:1.15;max-width:80%;position:relative;z-index:2}
+.btn{font:inherit;font-size:clamp(20px,4.5vmin,30px);color:var(--d);background:#fff;border:2.5px solid var(--d);border-radius:40px;padding:.2em 1.4em;cursor:pointer;transition:.2s;position:relative;z-index:2;margin:6px}
+.btn:hover,.btn:active{background:var(--d);color:#fff;transform:scale(1.07)}
+.row{display:flex;gap:14px;margin-top:14px}
+.gift{width:clamp(120px,30vmin,200px);animation:bob 2s ease-in-out infinite;position:relative;z-index:2}
+@keyframes bob{50%{transform:translateY(-8px) rotate(2deg)}}
+.hearts{left:8px;top:48px;width:clamp(70px,20vmin,130px)}
+.cat{right:clamp(4px,3vmin,24px);bottom:6px;width:clamp(100px,26vmin,190px)}
+.tul{bottom:4px;width:clamp(34px,8vmin,60px)}
+.duck{width:clamp(170px,42vmin,290px);margin:6px 0}
+.card{width:clamp(190px,46vmin,300px);position:relative;z-index:2}
+.pen{right:5%;bottom:8%;width:clamp(80px,22vmin,150px)}
+.nx{position:absolute;left:5%;bottom:11%}
+.fig{width:clamp(230px,56vmin,380px);margin-top:10px}
+.stk{left:4%;top:44%;font-size:clamp(17px,4vmin,26px);background:#f1e6dc;padding:2px 12px;transform:rotate(-4deg);border:1px dashed #c9b6a3;z-index:2}
+.face{right:6%;bottom:6%;width:clamp(70px,18vmin,120px)}
+.fl{position:absolute;bottom:-30px;animation:up linear infinite;opacity:.7;pointer-events:none}
+@keyframes up{to{transform:translateY(-110vh) rotate(40deg)}}
+.rp{position:absolute;right:16px;bottom:10px;font-size:18px;color:var(--d);background:none;border:0;cursor:pointer;text-decoration:underline;font-family:inherit;z-index:3}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="h" viewBox="0 0 24 22"><path d="M12 21C4 14 1 10 1 6.5A5.5 5.5 0 0 1 12 4a5.5 5.5 0 0 1 11 2.5C23 10 20 14 12 21z" fill="currentColor"/></symbol>
+<symbol id="star" viewBox="0 0 100 100"><path d="M50 4l13 30 33 3-25 22 8 32-29-17-29 17 8-32L4 37l33-3z" fill="#f06292" stroke="#ec407a" stroke-width="5" stroke-linejoin="round"/></symbol>
+<symbol id="bunt" viewBox="0 0 200 90"><path d="M3 12Q100 70 197 12" fill="none" stroke="#d81b60" stroke-width="2"/><g fill="#fff" stroke="#d81b60" stroke-width="2" stroke-linejoin="round"><path d="M14 22l16 4-6 26z"/><path d="M48 36l17 4-8 26z"/><path d="M85 44l17 2-6 26z"/><path d="M122 44l16-2-4 28z"/><path d="M158 36l15-6-1 28z"/></g><g fill="#f8bbd0"><path d="M24 27l5 -1-5 22z"/><path d="M57 41l6 -1-6 22z"/><path d="M95 49l6 -1-5 20z"/></g></symbol>
+<symbol id="t" viewBox="0 0 40 90"><path d="M20 40V88" stroke="#4caf50" stroke-width="4" fill="none"/><path d="M20 70Q36 62 38 48Q26 56 20 70" fill="#66bb6a"/><path d="M6 24Q4 6 10 2L20 14 30 2Q36 6 34 24Q32 44 20 44Q8 44 6 24Z" fill="#f48fb1" stroke="#d81b60" stroke-width="2" stroke-linejoin="round"/><path d="M20 14V40" stroke="#ec407a" stroke-width="2" fill="none"/></symbol>
+<symbol id="gift" viewBox="0 0 120 120"><rect x="12" y="50" width="96" height="62" rx="6" fill="#f8bbd0" stroke="#d81b60" stroke-width="3"/><rect x="6" y="34" width="108" height="22" rx="6" fill="#f48fb1" stroke="#d81b60" stroke-width="3"/><rect x="52" y="34" width="16" height="78" fill="#fff" opacity=".85"/><path d="M60 34C40 8 18 24 40 34M60 34C80 8 102 24 80 34" fill="none" stroke="#d81b60" stroke-width="4"/></symbol>
+<symbol id="cat" viewBox="0 0 120 140"><ellipse cx="60" cy="108" rx="34" ry="30" fill="#fff" stroke="#333" stroke-width="3"/><path d="M34 34L30 8 52 24M86 34L90 8 68 24" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/><circle cx="60" cy="52" r="30" fill="#fff" stroke="#333" stroke-width="3"/><circle cx="48" cy="50" r="3.5" fill="#333"/><circle cx="72" cy="50" r="3.5" fill="#333"/><path d="M55 60Q60 65 65 60" fill="none" stroke="#333" stroke-width="2.5"/><circle cx="40" cy="60" r="6" fill="#f8bbd0"/><circle cx="80" cy="60" r="6" fill="#f8bbd0"/><use href="#t" x="45" y="60" width="30" height="68"/><ellipse cx="46" cy="104" rx="9" ry="7" fill="#fff" stroke="#333" stroke-width="3"/><ellipse cx="74" cy="104" rx="9" ry="7" fill="#fff" stroke="#333" stroke-width="3"/></symbol>
+<symbol id="duck" viewBox="0 0 200 210"><ellipse cx="100" cy="150" rx="60" ry="50" fill="#ffd93b" stroke="#333" stroke-width="3"/><circle cx="100" cy="68" r="46" fill="#ffd93b" stroke="#333" stroke-width="3"/><path d="M84 78Q100 70 116 78Q120 98 100 98Q80 98 84 78Z" fill="#ff9800" stroke="#333" stroke-width="3"/><circle cx="82" cy="58" r="6" fill="#333"/><circle cx="118" cy="58" r="6" fill="#333"/><path d="M68 40L94 52M132 40L106 52" stroke="#333" stroke-width="6" stroke-linecap="round"/><path d="M42 150Q28 130 52 118" fill="#ffd93b" stroke="#333" stroke-width="3"/><g transform="rotate(-25 160 130)"><rect x="152" y="118" width="12" height="34" rx="3" fill="#6d4c41" stroke="#333" stroke-width="3"/><path d="M152 118V68L164 54V118Z" fill="#cfd8dc" stroke="#333" stroke-width="3" stroke-linejoin="round"/></g><ellipse cx="148" cy="148" rx="12" ry="10" fill="#ffd93b" stroke="#333" stroke-width="3"/></symbol>
+</defs></svg>
+
+<div class="frame">
+ <svg class="d star s1"><use href="#star"/></svg><svg class="d star s2"><use href="#star"/></svg>
+ <svg class="d bt b1"><use href="#bunt"/></svg><svg class="d bt b2"><use href="#bunt"/></svg>
+
+ <!-- PAGE 1 -->
+ <section class="pg on" id="p1">
+  <svg class="d hearts" viewBox="0 0 110 150"><path d="M10 0Q40 20 30 40Q22 62 52 72Q76 80 66 104" fill="none" stroke="#ec407a" stroke-width="2.5"/><circle cx="66" cy="120" r="14" fill="none" stroke="#ec407a" stroke-width="3"/><g fill="none" stroke="#ec407a" stroke-width="3"><use href="#h" x="26" y="20" width="26" height="24" style="color:#f8bbd0" fill="#f8bbd0"/></g><use href="#h" x="52" y="46" width="30" height="28" style="color:#f48fb1"/><use href="#h" x="6" y="62" width="22" height="20" style="color:#ec407a"/></svg>
+  <svg class="gift" viewBox="0 0 120 120"><use href="#gift"/></svg>
+  <h1>Do you wanna see your surprise? 🎁</h1>
+  <div class="row"><button class="btn" onclick="go(3)">Yes</button><button class="btn" onclick="go(2)">No</button></div>
+  <svg class="d tul" style="right:clamp(100px,30vmin,200px)" viewBox="0 0 40 90"><use href="#t"/></svg>
+  <svg class="d tul" style="right:clamp(130px,36vmin,240px);transform:scale(.8);transform-origin:bottom" viewBox="0 0 40 90"><use href="#t"/></svg>
+  <svg class="d tul" style="right:clamp(74px,22vmin,150px);transform:scale(.7);transform-origin:bottom" viewBox="0 0 40 90"><use href="#t"/></svg>
+  <svg class="d cat" viewBox="0 0 120 140"><use href="#cat"/></svg>
+ </section>
+
+ <!-- PAGE 2 -->
+ <section class="pg" id="p2">
+  <h1>How dare you 😡</h1>
+  <svg class="duck" viewBox="0 0 200 210"><use href="#duck"/></svg>
+  <button class="btn" onclick="go(1)">Try again</button>
+ </section>
+
+ <!-- PAGE 3 -->
+ <section class="pg" id="p3">
+  <svg class="card" viewBox="0 0 260 300">
+   <rect x="62" y="6" width="136" height="288" fill="#ec407a"/><rect x="72" y="16" width="116" height="268" fill="#fff"/>
+   <text x="130" y="48" text-anchor="middle" font-size="20" font-family="Patrick Hand,cursive" font-weight="700">I LOVE YOU</text>
+   <path d="M4 142L80 130V160Z M256 142L180 130V160Z" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+   <path d="M100 160Q90 90 130 82Q170 90 160 160V200H100Z" fill="#fff" stroke="#333" stroke-width="3"/>
+   <circle cx="116" cy="112" r="2.5" fill="#333"/><circle cx="144" cy="112" r="2.5" fill="#333"/><path d="M118 124Q130 134 142 124" fill="none" stroke="#333" stroke-width="3"/>
+   <text x="130" y="236" text-anchor="middle" font-size="19" font-family="Patrick Hand,cursive" font-weight="700">Thiiiiiiis</text>
+   <text x="130" y="262" text-anchor="middle" font-size="19" font-family="Patrick Hand,cursive" font-weight="700">MUCH <tspan fill="#ec407a">♥</tspan></text>
+  </svg>
+  <button class="btn nx" onclick="go(4)">next</button>
+  <svg class="d pen" viewBox="0 0 120 150"><path d="M70 40Q90 10 100 38M85 30Q70 0 55 34" fill="none"/><g stroke="#555" stroke-width=".8"><path d="M84 66Q92 90 88 112M84 66Q76 90 88 112" fill="none"/><ellipse cx="62" cy="18" rx="15" ry="18" fill="#b39ddb"/><ellipse cx="82" cy="12" rx="15" ry="18" fill="#f48fb1"/><ellipse cx="100" cy="26" rx="15" ry="18" fill="#e53935"/></g><ellipse cx="50" cy="104" rx="26" ry="32" fill="#7d5a6a"/><ellipse cx="50" cy="110" rx="17" ry="24" fill="#fbe4e4"/><circle cx="42" cy="86" r="2.5" fill="#222"/><circle cx="58" cy="86" r="2.5" fill="#222"/><path d="M46 92h8l-4 6z" fill="#ffb74d"/><path d="M76 98Q82 82 86 70" stroke="#7d5a6a" stroke-width="6" fill="none"/><path d="M40 138h-8M60 138h8" stroke="#ffb74d" stroke-width="5"/></svg>
+ </section>
+
+ <!-- PAGE 4 -->
+ <section class="pg" id="p4">
+  <h1>Flowers for you cutie 🌷<br><small style="font-size:.7em;color:var(--d)">Happy Birthday!! 🎂</small></h1>
+  <svg class="fig" viewBox="0 0 300 220">
+   <circle cx="110" cy="70" r="46" fill="#fff" stroke="#111" stroke-width="7"/><circle cx="98" cy="68" r="4" fill="#111"/><circle cx="128" cy="68" r="4" fill="#111"/><circle cx="88" cy="82" r="8" fill="#f8bbd0"/><circle cx="138" cy="82" r="8" fill="#f8bbd0"/><path d="M104 84Q112 90 120 84" fill="none" stroke="#111" stroke-width="3.5"/>
+   <path d="M90 118L56 214M150 118L170 214M130 130Q170 120 196 96" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+   <g transform="translate(176 8)"><use href="#t" x="0" y="20" width="50" height="112" transform="rotate(-14 25 120)"/><use href="#t" x="22" y="8" width="50" height="112"/><use href="#t" x="44" y="20" width="50" height="112" transform="rotate(14 70 120)"/><use href="#t" x="12" y="30" width="50" height="112" transform="rotate(-6 37 120)"/><use href="#t" x="34" y="30" width="50" height="112" transform="rotate(6 60 120)"/></g>
+  </svg>
+  <div class="d stk">“You’re perfect.” 💋</div>
+  <svg class="d face" viewBox="0 0 100 100"><circle cx="50" cy="52" r="40" fill="#fff" stroke="#333" stroke-width="3"/><path d="M30 48l12 5-12 5M70 48l-12 5 12 5" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/><circle cx="28" cy="66" r="8" fill="#f8bbd0"/><circle cx="72" cy="66" r="8" fill="#f8bbd0"/><path d="M40 68Q50 76 60 68" fill="none" stroke="#333" stroke-width="3"/><use href="#h" x="2" y="8" width="14" height="13" style="color:#ec407a"/><use href="#h" x="84" y="8" width="14" height="13" style="color:#ec407a"/></svg>
+  <button class="rp" onclick="go(1)">↺ replay</button>
+ </section>
+</div>
+
+<script>
+var cur=1,tm;
+function go(n){
+  document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on')});
+  document.getElementById('p'+n).classList.add('on');cur=n;
+  if(n==4){rain()}
+}
+function rain(){
+  var f=document.querySelector('.frame'),c=['#f48fb1','#ec407a','#f8bbd0'];
+  for(var i=0;i<16;i++){
+    var s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    s.setAttribute('class','fl');s.setAttribute('width',14+Math.random()*16);s.setAttribute('viewBox','0 0 24 22');
+    s.style.left=Math.random()*95+'%';s.style.color=c[i%3];
+    s.style.animationDuration=(5+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';
+    s.innerHTML='<use href="#h"/>';f.appendChild(s);
+    setTimeout(function(e){e.remove()}.bind(null,s),11000);
+  }
+}
+</script>
+</body></html>
